@@ -1,0 +1,33 @@
+{
+  "name": "live-streaming-server",
+  "version": "1.0.0",
+  "description": "Ingest RTMP - Relay to Social Media - Live Streaming",
+  "main": "app.js",
+  "scripts": {
+    "test": "NODE_ENV=development node app.js",
+    "start": "node app.js",
+    "get-login": "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 839237287596.dkr.ecr.us-east-1.amazonaws.com",
+    "build": "docker build -t video-streaming-server .",
+    "tag": "docker tag video-streaming-server 839237287596.dkr.ecr.us-east-1.amazonaws.com/video-streaming-server:%npm_package_version%",
+    "push": "docker push 839237287596.dkr.ecr.us-east-1.amazonaws.com/video-streaming-server:%npm_package_version%",
+    "deploy": "yarn run build && yarn run tag && yarn run push"
+  },
+  "keywords": [
+    "rtmp",
+    "flv",
+    "server"
+  ],
+  "dependencies": {
+    "@ffmpeg-installer/ffmpeg": "^1.1.0",
+    "aws-sdk": "^2.672.0",
+    "axios": "^0.19.2",
+    "chalk": "^4.1.1",
+    "chokidar": "^3.4.0",
+    "lodash": "^4.17.21",
+    "node-media-server": "https://github.com/ZekielDee/Node-Media-Server",
+    "redis": "^3.1.2"
+  },
+  "engines": {
+    "node": ">=8.0.0"
+  }
+}
