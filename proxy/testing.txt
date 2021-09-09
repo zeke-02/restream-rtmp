@@ -1,0 +1,12 @@
+1
+# be_id be_name srv_id srv_name srv_addr srv_op_state srv_admin_state srv_uweight srv_iweight srv_time_since_last_change srv_check_status srv_check_result srv_check_health srv_check_state srv_agent_state bk_f_forced_id srv_f_forced_id srv_fqdn srv_port srvrecord
+5 bk_rtmp 1 mediasrv0 10.0.0.1 0 5 1 1 61 1 0 0 14 0 0 0 - 1935 -
+5 bk_rtmp 2 mediasrv1 10.0.0.1 0 5 1 1 61 1 0 0 14 0 0 0 - 1935 -
+5 bk_rtmp 3 mediasrv2 10.0.0.1 0 5 1 1 61 1 0 0 14 0 0 0 - 1935 -
+5 bk_rtmp 4 mediasrv3 10.0.0.1 0 5 1 1 61 1 0 0 14 0 0 0 - 1935 -
+5 bk_rtmp 5 mediasrv4 10.0.0.1 0 5 1 1 61 1 0 0 14 0 0 0 - 1935 -
+5 bk_rtmp 6 mediasrv5 10.0.0.1 0 5 1 1 61 1 0 0 14 0 0 0 - 1935 -
+5 bk_rtmp 7 mediasrv6 10.0.0.1 0 5 1 1 61 1 0 0 14 0 0 0 - 1935 -
+5 bk_rtmp 8 mediasrv7 10.0.0.1 0 5 1 1 61 1 0 0 14 0 0 0 - 1935 -
+5 bk_rtmp 9 mediasrv8 10.0.0.1 0 5 1 1 61 1 0 0 14 0 0 0 - 1935 -
+5 bk_rtmp 10 mediasrv9 10.0.0.1 0 5 1 1 61 1 0 0 14 0 0 0 - 1935 -
