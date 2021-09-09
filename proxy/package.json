@@ -1,0 +1,24 @@
+{
+  "name": "live-streaming-proxy",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "generate-config": "node index.js",
+    "fetch-servers": "node fetch-servers.js",
+    "get-login": "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 839237287596.dkr.ecr.us-east-1.amazonaws.com",
+    "build": "docker build -t video-streaming-proxy .",
+    "tag": "docker tag video-streaming-proxy 839237287596.dkr.ecr.us-east-1.amazonaws.com/video-streaming-proxy:%npm_package_version%",
+    "push": "docker push 839237287596.dkr.ecr.us-east-1.amazonaws.com/video-streaming-proxy:%npm_package_version%",
+    "deploy": "yarn run build && yarn run tag && yarn run push"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.680.0",
+    "ejs": "^3.1.3",
+    "lodash": "^4.17.21",
+    "redis": "^3.1.2"
+  }
+}
