@@ -1,0 +1,25 @@
+{
+  "name": "ffmpeg_relay",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "get-login": "aws ecr get-login-password --region us-east-1 | docker login --username AWS --password-stdin 839237287596.dkr.ecr.us-east-1.amazonaws.com",
+    "build": "docker build -t ffmpeg-relay .",
+    "tag": "docker tag ffmpeg-relay:latest 839237287596.dkr.ecr.us-east-1.amazonaws.com/ffmpeg-relay:%npm_package_version%",
+    "push": "docker push 839237287596.dkr.ecr.us-east-1.amazonaws.com/ffmpeg-relay:%npm_package_version%",
+    "deploy": "npm run build && npm run tag && npm run push",
+    "start": "node index.js"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "aws-sdk": "^2.983.0",
+    "axios": "^0.21.1",
+    "lodash": "^4.17.21",
+    "query-string": "^7.0.1",
+    "redis": "^3.1.2",
+    "tsc": "^2.0.3"
+  }
+}
