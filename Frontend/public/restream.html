@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/basic.css">
+    <title>Document</title>
+</head>
+<body>
+  <section>
+    <a href="https://rtmp-restream-app-verification.auth.us-east-1.amazoncognito.com/logout?client_id=62orgop2dnipvfsp2na9hqrapd&logout_uri=https://d38sy1eub0ljyu.cloudfront.net/index.html">
+      Sign Out
+    </a>
+  </section>
+    <section>
+        <div id="preferences" class='visible'>
+          <header>
+              <h1>Select the destinations you would like to restream to: </h1>
+          </header>
+          <form id='preferencesForm'>
+              <input type="checkbox" id="youtube" name="youtube" value="youtube">
+              <label for="youtube"> YOUTUBE</label><br>
+              <input type="checkbox" id="facebook" name="facebook" value="facebook">
+              <label for="facebook"> FACEBOOK</label><br>
+              <input type="checkbox" id="twitch" name="twitch" value="twitch">
+              <label for="twitch"> TWITCH</label><br><br>
+              <input type="submit" value="Update">
+            </form>
+        </div>
+      </section>
+      <section>
+        <div id="stream-keys" class='visible'>
+          <header>
+              <h2>Input the stream keys of: </h2>
+          </header>
+          <form class="keys" id="keyForm">
+            <div class="visible">
+              <label for="youtube_key">Stream key for youtube</label>
+              <input type="text" id="youtube_key" name="youtube_key">
+            </div>
+            <div class="visible">
+              <label for="facebook_key">Stream key for facebook</label>
+              <input type="text" id="facebook_key" name="facebook_key">
+            </div>
+            <div class="visible">
+              <label for="twitch_key">Stream key for twitch</label>
+              <input type="text" id="twitch_key" name="twitch_key">
+            </div>
+            <input type="submit" value="Update">
+          </form>
+        </div>
+      </section>
+      <section>
+        <div>
+          <button id='get-endpoint' class='visible'>GET ENDPOINT</button>
+        </div>
+        <div id="endpoint-section" class='hidden'>
+          <h4>
+              Stream to this Link!
+          </h4>
+          <div id='endpoint'>ENDPOINT HERE</div>
+          <button id='button-endpoint'>Copy Link</button>
+        </div>
+      </section>
+      <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+      <script src="./vendor/aws-sdk.js"></script>
+      <script src='./src/app.js' async></script>
+</body>
+</html>
